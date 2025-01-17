@@ -19,6 +19,7 @@
       <HowToUseSection />
       <ExamplesSection />
     </div>
+    <TuturVue :steps="tourSteps" :isVisible="showTour" />
   </div>
 </template>
 
@@ -28,6 +29,39 @@ import HeroSection from "./components/HeroSection.vue";
 import FeaturesSection from "./components/FeaturesSection.vue";
 import HowToUseSection from "./components/HowToUseSection.vue";
 import ExamplesSection from "./components/ExamplesSection.vue";
+import TuturVue from "./components/TuturVue.vue";
+import { ref } from "vue";
+
+const showTour = ref(false);
+const startTour = () => {
+  showTour.value = true;
+};
+
+defineExpose({
+  startTour,
+});
+const tourSteps = [
+  {
+    id: "section-complementos",
+    title: `
+      Esta es la sección de complementos
+    `,
+    content:
+      "Acá podes ver tus complementos, guardar tus complementos favoritos y consultar por el que mas te guste",
+    attachTo: {
+      element: "#btn-how-to-use",
+      on: "bottom",
+    },
+    media: {
+      type: "video",
+      src: "https://res.cloudinary.com/dizqvnfsj/video/upload/f_auto:video,q_auto/q2lepafqqvbnzzhbt1mf",
+      alt: "Descripción de la imagen",
+      controls: false,
+    },
+    beforeShowPromise: () => scrollToElement("#section-complementos"),
+    position: "right",
+  },
+];
 </script>
 
 <style>
@@ -56,12 +90,10 @@ body {
   background: #555;
 }
 
-/* Ensure smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Code highlighting */
 pre {
   background-color: #1e1e1e;
   border-radius: 0.5rem;

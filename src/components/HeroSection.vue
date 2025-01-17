@@ -9,7 +9,7 @@
             class="bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text"
             >interactivos</span
           >
-          para tus apps Vue
+          para tus app web en vue
         </h2>
         <p class="text-gray-300 text-xl mb-8">
           TuturVue: Un componente reutilizable para crear tours de usuario en
@@ -19,6 +19,7 @@
           class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4"
         >
           <a
+            id="btn-how-to-use"
             href="#como-usar"
             class="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 px-8 py-3 rounded-full font-medium flex items-center justify-center w-full sm:w-auto transition-all duration-200 transform hover:scale-105"
           >
