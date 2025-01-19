@@ -55,6 +55,7 @@
             </div>
             <button
               class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200"
+              @click="emit('startTour')"
             >
               Iniciar Tour
             </button>
@@ -66,11 +67,11 @@
           <div class="flex items-center space-x-4 text-sm text-gray-400">
             <span class="flex items-center">
               <ClockIcon class="h-4 w-4 mr-1" />
-              3 Pasos
+              4 Pasos
             </span>
             <span class="flex items-center">
               <TimerIcon class="h-4 w-4 mr-1" />
-              2 min de duración
+              1 min de duración
             </span>
           </div>
         </div>
@@ -81,4 +82,6 @@
 
 <script setup>
 import { ArrowRightIcon, MapIcon, ClockIcon, TimerIcon } from "lucide-vue-next";
+
+const emit = defineEmits(["startTour"]);
 </script>

@@ -1,9 +1,11 @@
 <template>
   <div id="como-usar" class="max-w-7xl mx-auto px-6 py-24">
     <h2 class="text-4xl font-bold mb-12 text-center">Cómo Usar TuturVue</h2>
-    <div class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
+    <div
+      class="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 shadow-2xl"
+      id="documentation"
+    >
       <div class="space-y-8">
-        <!-- Paso 1 -->
         <div>
           <h3 class="text-2xl font-semibold mb-4">1. Instala el componente</h3>
           <p class="text-gray-300 mb-4">
@@ -20,8 +22,6 @@ import TuturVue from './components/TuturVue.vue';
 </code>
           </pre>
         </div>
-
-        <!-- Paso 2 -->
         <div>
           <h3 class="text-2xl font-semibold mb-4">
             2. Configura los pasos del tour
@@ -32,8 +32,7 @@ import TuturVue from './components/TuturVue.vue';
           </p>
           <ul class="list-disc list-inside text-gray-300 mb-4">
             <li>
-              <code>id</code>: Un identificador único del paso (opcional, pero
-              útil para personalizar comportamientos).
+              <code>id</code>: El id del elemento que se destacará en ese paso.
             </li>
             <li>
               <code>title</code>: Un título que se mostrará para el paso. Puede
@@ -56,8 +55,8 @@ import TuturVue from './components/TuturVue.vue';
               </ul>
             </li>
             <li>
-              <code>position</code>: Especifica dónde se debe mostrar el paso en
-              la pantalla.
+              <code>position</code>: La posición del contenido del paso en
+              relación con el elemento destacado (top, bottom, left, right).
             </li>
             <li>
               <code>media</code>: (Opcional) Incluye imágenes o videos.
@@ -124,8 +123,6 @@ const steps = [
 </code>
           </pre>
         </div>
-
-        <!-- Paso 3 -->
         <div>
           <h3 class="text-2xl font-semibold mb-4">
             3. Usa el componente en tu template
@@ -159,8 +156,6 @@ const steps = [
 </code>
           </pre>
         </div>
-
-        <!-- Paso 4 -->
         <div>
           <h3 class="text-2xl font-semibold mb-4">
             4. Controla la visibilidad del tour
@@ -186,8 +181,6 @@ const handleStepChange = (currentStep) => {
 </code>
           </pre>
         </div>
-
-        <!-- Paso 5 -->
         <div>
           <h3 class="text-2xl font-semibold mb-4">
             5. Personaliza más el tour

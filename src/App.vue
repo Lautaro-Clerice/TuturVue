@@ -14,7 +14,7 @@
     <!-- Content Wrapper -->
     <div class="relative z-10">
       <TheNavigation />
-      <HeroSection />
+      <HeroSection @startTour="startTour" />
       <FeaturesSection />
       <HowToUseSection />
       <ExamplesSection />
@@ -37,29 +37,65 @@ const startTour = () => {
   showTour.value = true;
 };
 
-defineExpose({
-  startTour,
-});
 const tourSteps = [
   {
-    id: "section-complementos",
+    id: "btn-how-to-use",
+    title: `
+      Con este boton podes ver como usar el componente TuturVue
+    `,
+    content: "Al hacer click sobre el podrás visualizar la documentación",
+    attachTo: {
+      element: "#btn-how-to-use",
+      on: "bottom",
+    },
+
+    beforeShowPromise: () => scrollToElement("#btn-how-to-use"),
+    position: "right",
+  },
+  {
+    id: "feature-section",
+    title: `
+      En esta sección podés ver lo mejor de este componente
+    `,
+    content: "Enterate de todo lo que contiene TuturVue",
+    attachTo: {
+      element: "#feature-section",
+    },
+
+    beforeShowPromise: () => scrollToElement("#feature-section"),
+    position: "bottom",
+  },
+
+  {
+    id: "documentation",
     title: `
       Esta es la sección de complementos
     `,
     content:
       "Acá podes ver tus complementos, guardar tus complementos favoritos y consultar por el que mas te guste",
     attachTo: {
-      element: "#btn-how-to-use",
+      element: "#documentation",
       on: "bottom",
     },
-    media: {
-      type: "video",
-      src: "https://res.cloudinary.com/dizqvnfsj/video/upload/f_auto:video,q_auto/q2lepafqqvbnzzhbt1mf",
-      alt: "Descripción de la imagen",
-      controls: false,
-    },
-    beforeShowPromise: () => scrollToElement("#section-complementos"),
+
+    beforeShowPromise: () => scrollToElement("#documentation"),
     position: "right",
+  },
+  {
+    id: "examples-section",
+    title: `
+      Sección de ejemplos
+    `,
+    content: "Utilizá como recurso estos ejemplos para crear tus propios tours",
+    attachTo: {
+      element: "#examples-section",
+    },
+
+    beforeShowPromise: () => scrollToElement("#examples-section"),
+    position: "bottom",
+    onFinish: () => {
+      showTour.value = false;
+    },
   },
 ];
 </script>

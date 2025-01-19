@@ -1,6 +1,8 @@
 <template>
   <div id="ejemplos" class="max-w-7xl mx-auto px-6 py-24">
-    <h2 class="text-4xl font-bold mb-12 text-center">Ejemplos de Uso</h2>
+    <h2 class="text-4xl font-bold mb-12 text-center" id="examples-section">
+      Ejemplos de Uso
+    </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div
         v-for="example in examples"

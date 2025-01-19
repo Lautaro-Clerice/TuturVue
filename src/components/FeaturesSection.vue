@@ -3,7 +3,10 @@
     <h2 class="text-4xl font-bold mb-12 text-center">
       Características Principales
     </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div
+      id="feature-section"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+    >
       <div
         v-for="feature in features"
         :key="feature.title"
