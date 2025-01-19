@@ -74,10 +74,10 @@ const tourSteps = [
   {
     id: "documentation",
     title: `
-      Esta es la sección de complementos
+      Esta es la sección de documentación
     `,
     content:
-      "Acá podes ver tus complementos, guardar tus complementos favoritos y consultar por el que mas te guste",
+      "Acá podes ver todas las props aceptadas y formas de uso del componente",
     attachTo: {
       element: "#documentation",
       on: "bottom",
