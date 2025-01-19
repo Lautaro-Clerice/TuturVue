@@ -25,7 +25,7 @@
         </a>
 
         <a
-          href="https://github.com/tuturvue"
+          href="https://github.com/Lautaro-Clerice/TuturVue"
           class="flex items-center space-x-1 bg-gray-800/50 rounded-full px-4 py-2 hover:bg-gray-700/50 transition-colors duration-200"
         >
           <GithubIcon class="h-5 w-5" />
@@ -54,7 +54,7 @@
       </a>
 
       <a
-        href="https://github.com/tuturvue"
+        href="https://github.com/Lautaro-Clerice/TuturVue"
         class="flex items-center space-x-1 bg-gray-800/50 rounded-full px-4 py-2 mt-4 hover:bg-gray-700/50 transition-colors duration-200"
       >
         <GithubIcon class="h-5 w-5" />

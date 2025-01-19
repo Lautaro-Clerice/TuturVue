@@ -31,7 +31,7 @@ import HowToUseSection from "./components/HowToUseSection.vue";
 import ExamplesSection from "./components/ExamplesSection.vue";
 import TuturVue from "./components/TuturVue.vue";
 import { ref } from "vue";
-
+import tuturVue from "./assets/tuturVue.png";
 const showTour = ref(false);
 const startTour = () => {
   showTour.value = true;
@@ -41,9 +41,14 @@ const tourSteps = [
   {
     id: "btn-how-to-use",
     title: `
-      Con este boton podes ver como usar el componente TuturVue
+      Como usar el componente TuturVue
     `,
     content: "Al hacer click sobre el podrás visualizar la documentación",
+    media: {
+      type: "image",
+      src: tuturVue,
+      alt: "Logo TuturVue",
+    },
     attachTo: {
       element: "#btn-how-to-use",
       on: "bottom",
