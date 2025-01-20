@@ -138,8 +138,8 @@ const steps = [
               (<code>boolean</code>).
             </li>
             <li>
-              <code>@end</code>: Escucha el evento que se dispara cuando el tour
-              finaliza.
+              <code>@end</code>: Escucha el evento que se dispara al clickear
+              fuera del componente tour
             </li>
             <li>
               <code>@step-change</code>: Escucha el evento que se dispara cuando

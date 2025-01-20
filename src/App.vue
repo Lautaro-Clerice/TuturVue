@@ -19,7 +19,11 @@
       <HowToUseSection />
       <ExamplesSection />
     </div>
-    <TuturVue :steps="tourSteps" :isVisible="showTour" />
+    <TuturVue
+      :steps="tourSteps"
+      :isVisible="showTour"
+      @end="showTour = false"
+    />
   </div>
 </template>
 
